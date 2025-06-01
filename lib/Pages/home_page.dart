@@ -1,0 +1,143 @@
+import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
+import 'package:strolltask/Utils/Constants/asset_constant.dart';
+import 'package:strolltask/Utils/Constants/color_constant.dart';
+import 'package:strolltask/Utils/Constants/string_constant.dart';
+import 'package:strolltask/Utils/Widgets/text_widget.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: ColorConstant.blackColor,
+      body: Stack(
+        children: [
+          Image.asset(
+            AssetConstant.bgImage,
+            width: 100.w,
+            fit: BoxFit.contain,
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 4.w, right: 4.w, top: 6.h),
+            child: Column(
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextWidget(
+                      StringConstant.bonfireString,
+                      color: ColorConstant.bonfireTextColor,
+                      fontSize: 24,
+                      fontWeight: FontWeight.w700,
+                      textAlign: TextAlign.center,
+                      shadows: [
+                        Shadow(
+                          color: ColorConstant.shadowColor1,
+                          offset: const Offset(0, 0),
+                          blurRadius: 7.9,
+                        ),
+                        Shadow(
+                          color: ColorConstant.shadowColor2,
+                          offset: const Offset(0, 0),
+                          blurRadius: 2,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      width: 0.2.w,
+                    ),
+                    Icon(
+                      Icons.keyboard_arrow_down,
+                      color: ColorConstant.dropdownColor,
+                      size: 34,
+                      shadows: [
+                        Shadow(
+                          color: ColorConstant.shadowColor3,
+                          offset: const Offset(0, 0.3),
+                          blurRadius: 0.3,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(height: 0.2.h),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.timer_outlined,
+                      color: ColorConstant.whiteColor,
+                      size: 18,
+                    ),
+                    SizedBox(width: 0.4.w),
+                    TextWidget(
+                      StringConstant.time,
+                      color: ColorConstant.whiteColor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(width: 1.5.w),
+                    Icon(
+                      Icons.person_2_outlined,
+                      color: ColorConstant.whiteColor,
+                      size: 18,
+                    ),
+                    SizedBox(width: 0.4.w),
+                    TextWidget(
+                      StringConstant.user,
+                      color: ColorConstant.whiteColor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+                SizedBox(height: 37.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Image.asset(
+                      AssetConstant.userImage,
+                      fit: BoxFit.cover,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(height: 2.h),
+                        TextWidget(
+                          StringConstant.userName,
+                          color: ColorConstant.userNameColor,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(height: 1.h),
+                        SizedBox(
+                          width: 50.w,
+                          child: TextWidget(
+                            StringConstant.question,
+                            color: ColorConstant.userNameColor,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            textAlign: TextAlign.start,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
