@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
                     TextWidget(
                       StringConstant.bonfireString,
                       color: ColorConstant.bonfireTextColor,
-                      fontSize: 24,
+                      fontSize: 22,
                       fontWeight: FontWeight.w700,
                       textAlign: TextAlign.center,
                       shadows: [
@@ -80,7 +80,7 @@ class HomePage extends StatelessWidget {
                     TextWidget(
                       StringConstant.time,
                       color: ColorConstant.whiteColor,
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: FontWeight.w600,
                       textAlign: TextAlign.center,
                     ),
@@ -94,7 +94,7 @@ class HomePage extends StatelessWidget {
                     TextWidget(
                       StringConstant.user,
                       color: ColorConstant.whiteColor,
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: FontWeight.w600,
                       textAlign: TextAlign.center,
                     ),
@@ -152,12 +152,14 @@ class HomePage extends StatelessWidget {
                     PollOptionButton(
                       label: StringConstant.option1,
                       leadingChar: 'A',
+                      backgroundColor: ColorConstant.boxColor,
                       borderColor: ColorConstant.optionColor,
                       leadingCharColor: ColorConstant.optionColor,
                     ),
                     PollOptionButton(
                       label: StringConstant.option2,
                       leadingChar: 'B',
+                      backgroundColor: ColorConstant.boxColor,
                       borderColor: ColorConstant.optionColor,
                       leadingCharColor: ColorConstant.optionColor,
                     ),
@@ -171,6 +173,7 @@ class HomePage extends StatelessWidget {
                     PollOptionButton(
                       label: StringConstant.option3,
                       leadingChar: 'C',
+                      backgroundColor: ColorConstant.boxColor,
                       borderColor: ColorConstant.optionColor,
                       leadingCharColor: ColorConstant.optionColor,
                     ),
@@ -218,6 +221,7 @@ class HomePage extends StatelessWidget {
                       width: 48,
                       height: 48,
                       decoration: BoxDecoration(
+                        color: ColorConstant.iconColor,
                         border: Border.all(
                           color: ColorConstant.iconColor,
                           width: 2.2,
@@ -226,7 +230,7 @@ class HomePage extends StatelessWidget {
                       ),
                       child: Icon(
                         Icons.arrow_forward,
-                        color: ColorConstant.iconColor,
+                        color: ColorConstant.black,
                         size: 30,
                       ),
                     )
