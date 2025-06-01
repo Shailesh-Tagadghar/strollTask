@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
           Image.asset(
             AssetConstant.bgImage,
             width: 100.w,
-            fit: BoxFit.contain,
+            fit: BoxFit.cover,
           ),
           Padding(
             padding: EdgeInsets.only(left: 4.w, right: 4.w, top: 6.h),
@@ -182,14 +182,54 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 1.h),
-                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
-                  TextWidget(StringConstant.option1,
-                    color: ColorConstant.optionTextColor,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ],)
+                SizedBox(height: 1.5.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: TextWidget(
+                        StringConstant.option5,
+                        color: ColorConstant.optionTextColor,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        textAlign: TextAlign.start,
+                      ),
+                    ),
+                    Container(
+                      width: 48,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: ColorConstant.iconColor,
+                          width: 2.2,
+                        ),
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        Icons.mic,
+                        color: ColorConstant.iconColor,
+                        size: 30,
+                      ),
+                    ),
+                    SizedBox(width: 2.w),
+                    Container(
+                      width: 48,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: ColorConstant.iconColor,
+                          width: 2.2,
+                        ),
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        Icons.arrow_forward,
+                        color: ColorConstant.iconColor,
+                        size: 30,
+                      ),
+                    )
+                  ],
+                )
               ],
             ),
           ),

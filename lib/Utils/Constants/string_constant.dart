@@ -11,7 +11,7 @@ class StringConstant {
   static const String option3 = 'Wind-down time after dinners';
   static const String option4 = 'The serenity past midnight';
   static const String option5 = '''Pick your option.
-  See who has a similar mind.''';
+See who has a similar mind.''';
 
 
   
