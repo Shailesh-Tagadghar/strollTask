@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:strolltask/Pages/bottombar_page.dart';
 import 'package:strolltask/Utils/Constants/asset_constant.dart';
 import 'package:strolltask/Utils/Constants/color_constant.dart';
 import 'package:strolltask/Utils/Constants/string_constant.dart';
@@ -18,10 +19,11 @@ class HomePage extends StatelessWidget {
           Image.asset(
             AssetConstant.bgImage,
             width: 100.w,
+            height: 55.h,
             fit: BoxFit.cover,
           ),
           Padding(
-            padding: EdgeInsets.only(left: 4.w, right: 4.w, top: 6.h),
+            padding: EdgeInsets.only(left: 4.w, right: 4.w, top: 4.5.h),
             child: Column(
               children: [
                 Row(
@@ -98,7 +100,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 37.h),
+                SizedBox(height: 36.5.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -234,6 +236,10 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: BottombarPage(
+        selectedIndex: 2,
+        notificationCount: 10,
       ),
     );
   }

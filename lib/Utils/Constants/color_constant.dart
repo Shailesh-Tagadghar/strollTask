@@ -16,4 +16,5 @@ class ColorConstant {
   static const shadowColor3 = Color(0x80000000);
   static const boxColor = Color(0xFF232A2E);
   static const shadowColor4 = Color(0x4848484D);
+static const bottomAppBarColor = Color(0x0F1115);
 }
