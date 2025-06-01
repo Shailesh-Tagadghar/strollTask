@@ -8,6 +8,7 @@ class TextWidget extends StatelessWidget {
   final FontWeight fontWeight;
   final TextAlign textAlign;
   final List<Shadow>? shadows;
+  final int? maxLine;
 
   const TextWidget(
     this.text, {
@@ -17,6 +18,7 @@ class TextWidget extends StatelessWidget {
     this.fontWeight = FontWeight.normal,
     this.textAlign = TextAlign.center,
     this.shadows,
+    this.maxLine,
   });
 
   @override
@@ -24,6 +26,8 @@ class TextWidget extends StatelessWidget {
     return Text(
       text,
       textAlign: textAlign,
+      maxLines: maxLine,
+      softWrap: true,      
       style: TextStyle(
         color: color,
         fontSize: fontSize.sp,

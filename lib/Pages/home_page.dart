@@ -3,6 +3,7 @@ import 'package:sizer/sizer.dart';
 import 'package:strolltask/Utils/Constants/asset_constant.dart';
 import 'package:strolltask/Utils/Constants/color_constant.dart';
 import 'package:strolltask/Utils/Constants/string_constant.dart';
+import 'package:strolltask/Utils/Widgets/poll_option_widget.dart';
 import 'package:strolltask/Utils/Widgets/text_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -114,18 +115,18 @@ class HomePage extends StatelessWidget {
                         TextWidget(
                           StringConstant.userName,
                           color: ColorConstant.userNameColor,
-                          fontSize: 14,
+                          fontSize: 15,
                           fontWeight: FontWeight.w700,
                           textAlign: TextAlign.center,
                         ),
                         SizedBox(height: 1.h),
                         SizedBox(
-                          width: 50.w,
+                          width: 60.w,
                           child: TextWidget(
                             StringConstant.question,
                             color: ColorConstant.userNameColor,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
                             textAlign: TextAlign.start,
                           ),
                         ),
@@ -133,6 +134,62 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: 1.h),
+                TextWidget(
+                  StringConstant.content,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 15,
+                  color: ColorConstant.dropdownColor.withOpacity(0.7),
+                  textAlign: TextAlign.start,
+                ),
+                SizedBox(height: 2.h),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    PollOptionButton(
+                      label: StringConstant.option1,
+                      leadingChar: 'A',
+                      borderColor: ColorConstant.optionColor,
+                      leadingCharColor: ColorConstant.optionColor,
+                    ),
+                    PollOptionButton(
+                      label: StringConstant.option2,
+                      leadingChar: 'B',
+                      borderColor: ColorConstant.optionColor,
+                      leadingCharColor: ColorConstant.optionColor,
+                    ),
+                  ],
+                ),
+                SizedBox(height: 1.5.h),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    PollOptionButton(
+                      label: StringConstant.option3,
+                      leadingChar: 'C',
+                      borderColor: ColorConstant.optionColor,
+                      leadingCharColor: ColorConstant.optionColor,
+                    ),
+                    PollOptionButton(
+                      label: StringConstant.option4,
+                      leadingChar: 'D',
+                      leadingCharColor: ColorConstant.userNameColor,
+                      boxBorderColor: ColorConstant.iconColor,
+                      backgroundColor: ColorConstant.iconColor,
+                      borderColor: ColorConstant.iconColor,
+                    ),
+                  ],
+                ),
+                SizedBox(height: 1.h),
+                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
+                  TextWidget(StringConstant.option1,
+                    color: ColorConstant.optionTextColor,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ],)
               ],
             ),
           ),

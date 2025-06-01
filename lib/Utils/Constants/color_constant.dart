@@ -10,8 +10,10 @@ class ColorConstant {
   static const iconColor = Color(0xFF8B88EF);
   static const bottomIconColor = Color(0xFF6F6E7C);
   static const blackColor = Color(0xFF020202);
+  static const black = Color(0xFF000000);
   static const shadowColor1 = Color(0x33000000);
   static const shadowColor2 = Color(0xFFBEBEBE);
   static const shadowColor3 = Color(0x80000000);
-
+  static const boxColor = Color(0xFF232A2E);
+  static const shadowColor4 = Color(0x4848484D);
 }
